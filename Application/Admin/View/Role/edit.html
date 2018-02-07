@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>如影随形 - 后台管理</title>
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+    <!-- bootstrap -->
+    <link href="__PUBLIC__/Admin/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="__PUBLIC__/Admin/css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="__PUBLIC__/Admin/css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/elements.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/icons.css" />
+
+    <!-- libraries -->
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/lib/font-awesome.css" />
+    
+    <!-- this page specific styles -->
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/compiled/new-user.css" type="text/css" media="screen" />
+
+    <!-- open sans font -->
+    <!-- <link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' /> -->
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+
+    <!-- navbar -->
+<include file="Admin@Common:header" />
+    <!-- end navbar -->
+
+    <!-- sidebar -->
+<include file="Admin@Common:left" />
+    <!-- end sidebar -->
+
+
+	<!-- main container -->
+    <div class="content">
+        
+        <div class="container-fluid">
+            <div id="pad-wrapper" class="new-user">
+                <div class="row-fluid header">
+                    <h3>修改角色</h3>
+                    <div class="span10 pull-right">
+                        <!-- <input type="text" class="span5 search" placeholder="Type a user's name..." /> -->
+                        
+                        <a href="{:U('lst')}" class="btn-flat success pull-right">
+                            <span>&#43;</span>
+                           返回角色列表
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="row-fluid form-wrapper">
+                    <!-- left column -->
+                    <div class="span9 with-sidebar">
+                        <div class="container">
+                            <form action="" method="post" class="new_user_form inline-input" />
+                            <input type="hidden" name="id" value="{$roles['id']}">
+                                <div class="span12 field-box">
+                                    <label>角色名称:</label>
+                                    <input name="rolename" value="{$roles['rolename']}" class="span9" type="text" />
+                                </div>
+                                <div class="span12 field-box">
+                                    <label>拥有权限:</label>
+                            </div>
+                            <div class="span9 with-sidebar">
+                            <ul>                         
+                        <foreach name="pris" item="v">
+                                               <li lev="{$v['lev']}"  style="list-style-type:none; margin-bottom: 10px;">     
+                                                <input 
+                                                <if condition="$roles['pri_id_list'] eq '*'">checked="checked"</if>
+                                                <?php if(in_array($v['id'],$arr)){ echo 'checked="checked"'; } ?>
+                                                 style="margin-left: 70px;" type="checkbox" 
+                                                 name="pri_id_list[]" value="{$v['id']}" class="textbox" />
+                                                 <?php echo str_repeat('-',$v['lev']*8);?>{$v['pri_name']}
+                                                  </li>
+                         </foreach>
+                        </ul>
+                                </div>
+
+                                <div class="span11 field-box actions">
+                                    <input type="submit" class="btn-glow primary" value="Revise role" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- side right column -->
+<!--                     <div class="span3 form-sidebar pull-right">
+                        <div class="btn-group toggle-inputs hidden-tablet">
+                            <button class="glow left active" data-input="inline">INLINE INPUTS</button>
+                            <button class="glow right" data-input="normal">NORMAL INPUTS</button>
+                        </div>
+                        <div class="alert alert-info hidden-tablet">
+                            <i class="icon-lightbulb pull-left"></i>
+                            Click above to see difference between inline and normal inputs on a form
+                        </div>                        
+                        <h6>Sidebar text for instructions</h6>
+                        <p>Add multiple users at once</p>
+                        <p>Choose one of the following file types:</p>
+                        <ul>
+                            <li><a href="#">Upload a vCard file</a></li>
+                            <li><a href="#">Import from a CSV file</a></li>
+                            <li><a href="#">Import from an Excel file</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- end main container -->
+
+
+	<!-- scripts -->
+    <script src="__PUBLIC__/Admin/js/jquery-latest.js"></script>
+    <script src="__PUBLIC__/Admin/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/Admin/js/theme.js"></script>
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            // toggle form between inline and normal inputs
+            var $buttons = $(".toggle-inputs button");
+            var $form = $("form.new_user_form");
+
+            $buttons.click(function () {
+                var mode = $(this).data("input");
+                $buttons.removeClass("active");
+                $(this).addClass("active");
+
+                if (mode === "inline") {
+                    $form.addClass("inline-input");
+                } else {
+                    $form.removeClass("inline-input");
+                }
+            });
+        });
+
+
+
+
+        // checkbox 全选与反选
+        // 
+           $(':checkbox').click(function(){
+
+        // 获取当前li,通过当前input找父级的dom对象就是li
+        var cur_li = $(this).parent();
+
+        // 获取当前li的lev值
+        var cur_lev = cur_li.attr('lev');
+
+        // 获取当前input的选中状态
+        var checked = this.checked;
+
+        // 如果当前input为选中状态
+        if(checked){
+
+            // 获取当前li的所有上级li,再用each遍历
+            cur_li.prevAll('li').each(function(){
+
+                // 判断,如果上级li的lev值小于当前li的lev值
+                if($(this).attr('lev')<cur_lev){
+
+                    // 则,将符合条件的上级li设为选中状态
+                    $(this).find(':checkbox').prop('checked',true);
+                }
+
+                // 注意点:如果上级li的lev值等于0了,说明到顶级了,给false,防止选中别的li的上级li
+                if($(this).attr('lev')==0){
+                    return false;
+                }
+            });
+        }else{ // 如果取消掉当前的input的选中属性
+
+            // 找到当前取消掉的li的所有下级li,再each循环
+            cur_li.nextAll('li').each(function(){
+
+                // 判断,如果下级li的lev值大于当前li的lev值
+                if($(this).attr('lev')>cur_lev){
+
+                    // 则,将符合条件的下级li设为未选中状态
+                    $(this).find(':checkbox').prop('checked',false);
+                }else{
+
+                    // 注意点:不符合条件,给false
+                    return false;
+                }
+            });
+        }
+    });
+    </script>
+
+
+
+</body>
+</html>

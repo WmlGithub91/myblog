@@ -1,0 +1,12 @@
+[ 2017-05-26T09:56:42+08:00 ] 127.0.0.1 /myblog/index.php/Ahome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Ahome
+
+[ 2017-05-26T10:58:28+08:00 ] 127.0.0.1 /myblog/index.php/index/cateid/%7BI('cateid')%7D/artid/%7BI('artid')%7D.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Index
+

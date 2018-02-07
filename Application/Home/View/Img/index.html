@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="{$Think.config.DES}">
+  <meta name="keywords" content="{$Think.config.KEYWORDS}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>{$Think.config.TITLE}</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="icon" type="image/png" href="__PUBLIC__/Home/assets/i/favicon.ico">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="__PUBLIC__/Home/assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="__PUBLIC__/Home/assets/i/app-icon72x72@2x.png">
+  <meta name="msapplication-TileImage" content="__PUBLIC__/Home/assets/i/app-icon72x72@2x.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+  <link rel="stylesheet" href="__PUBLIC__/Home/assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="__PUBLIC__/Home/assets/css/app.css">
+</head>
+
+<body id="blog-article-sidebar">
+<!-- header start -->
+<include file="Home@Common:header" />
+<!-- content srart -->
+<div class="am-g am-g-fixed blog-fixed blog-content">
+  <figure data-am-widget="figure" class="am am-figure am-figure-default "   data-am-figure="{  pureview: 'true' }">
+      <div id="container"> 
+      <foreach name="imgs" item="s">
+          <div><img src="__PUBLIC__{$s['pic']}"><h3>{$s['keywords']}</h3></div>
+      </foreach>
+          
+    </div> 
+  </figure>
+
+</div>
+<!-- content end -->
+<include file="Home@Common:footer" />
+
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="__PUBLIC__/Home/assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="__PUBLIC__/Home/assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script src="__PUBLIC__/Home/assets/js/amazeui.min.js"></script>
+<script src="__PUBLIC__/Home/assets/js/pinto.min.js"></script>
+<script src="__PUBLIC__/Home/assets/js/img.js"></script>
+</body>
+</html>

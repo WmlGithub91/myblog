@@ -1,0 +1,2447 @@
+[ 2017-05-27T10:44:42+08:00 ] 127.0.0.1 /myblog/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0020s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\myblog\Application\Home\Controller\IndexController.class.php 第 8 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\myblog\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  ORDER BY a.id desc LIMIT 10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: subtime D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 276 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-27T10:44:45+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T10:44:45+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T10:57:39+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T10:57:39+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T10:58:00+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T10:58:00+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T10:58:10+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-27T10:58:10+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T10:58:38+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-27T10:58:38+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-27T10:58:39+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T10:58:39+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-27T10:58:48+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0020s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T10:58:48+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T10:58:51+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T10:58:51+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:02:28+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-27T11:02:42+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:02:43+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:02:44+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:02:44+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-27T11:02:55+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-27T11:02:55+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-27T11:03:18+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:03:18+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:03:19+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:03:19+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-27T11:03:20+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:03:20+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:03:20+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2017-05-27T11:03:20+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:03:20+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:03:20+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-27T11:03:20+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:03:20+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:03:20+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:03:20+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:03:21+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-27T11:03:21+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:04:20+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:04:20+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-27T11:04:41+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:04:41+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:04:43+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:04:44+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:04:44+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:04:44+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-27T11:04:57+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:04:57+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:04:58+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:04:58+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:04:59+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:04:59+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-27T11:05:12+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:05:12+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:05:12+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.016000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.016000s ]
+
+[ 2017-05-27T11:05:12+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:05:12+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-27T11:05:12+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:05:13+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:05:13+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:05:13+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:05:13+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-27T11:05:13+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:05:13+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-27T11:05:14+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:05:14+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-27T11:05:16+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-27T11:05:16+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:05:22+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:05:22+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:05:23+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:05:23+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-27T11:06:14+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:06:14+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:06:26+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T11:06:26+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T12:01:15+08:00 ] 127.0.0.1 /myblog/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\myblog\Application\Home\Controller\IndexController.class.php 第 8 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\myblog\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  ORDER BY a.id desc LIMIT 10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: subtime D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 276 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T12:04:02+08:00 ] 127.0.0.1 /myblog/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\myblog\Application\Home\Controller\IndexController.class.php 第 8 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\myblog\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  ORDER BY a.id desc LIMIT 10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: subtime D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 276 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-27T12:04:03+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `article` SET `num`=num+1 WHERE `id` = 1 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T12:04:03+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-27T12:04:05+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `article` SET `num`=num+1 WHERE `id` = 1 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-27T12:04:05+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T12:04:09+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `article` SET `num`=num+1 WHERE `id` = 1 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T12:04:09+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T12:13:39+08:00 ] 127.0.0.1 /myblog/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\myblog\Application\Home\Controller\IndexController.class.php 第 8 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\myblog\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  ORDER BY a.id desc LIMIT 10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: subtime D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 276 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T12:15:56+08:00 ] 127.0.0.1 /myblog/Home/Article/msg_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\myblog\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: INSERT INTO `msg` (`name`,`email`,`content`,`artid`,`time`,`pic`) VALUES ('小Y','312321@qq.com','他反问阿汤哥挖饿所提供微微萨嘎他岗位','1','1495858556','/Uploads/2017-05-27/5928fd7cef046.jpg') [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T12:15:58+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `article` SET `num`=num+1 WHERE `id` = 1 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-27T12:15:58+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T14:29:55+08:00 ] 127.0.0.1 /myblog/Home/Article/msg_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\myblog\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: INSERT INTO `msg` (`name`,`email`,`content`,`artid`,`time`,`pic`) VALUES ('热天','3425343@qq.com','广东省规划','1','1495866595','/Uploads/2017-05-27/59291ce3dbf96.jpg') [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T14:29:57+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `article` SET `num`=num+1 WHERE `id` = 1 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T14:29:57+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T14:34:19+08:00 ] 127.0.0.1 /myblog/Home/Article/msg_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\myblog\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: INSERT INTO `msg` (`name`,`email`,`content`,`artid`,`time`,`pic`) VALUES ('缘分','admin111@admin111.com','热天月额','1','1495866859','/Uploads/2017-05-27/59291deb42a76.jpg') [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T14:34:20+08:00 ] 127.0.0.1 /myblog/Home/Article/index/cateid/8/artid/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( a.id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `msg` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `msg` WHERE ( artid=1 ) ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` > '1' AND `cateid` = '8' ORDER BY id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` < '1' AND `cateid` = '8' ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `article` SET `num`=num+1 WHERE `id` = 1 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: k D:\wamp\www\myblog\Application\Runtime\Cache\Home\2ac6c1276904b87404ed678dbabb985c.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T14:34:20+08:00 ] 127.0.0.1 /myblog/Home/Article/index/images/common/sg_icon.png?20131218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T14:39:29+08:00 ] 127.0.0.1 /myblog/Home/Msg/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Msg
+
+[ 2017-05-27T14:39:58+08:00 ] 127.0.0.1 /myblog/Home/Msg/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Msg
+
+[ 2017-05-27T15:31:51+08:00 ] 127.0.0.1 /myblog/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\myblog\Application\Home\Controller\IndexController.class.php 第 8 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\myblog\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  ORDER BY a.id desc LIMIT 10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: subtime D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 276 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T15:32:23+08:00 ] 127.0.0.1 /myblog/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\myblog\Application\Home\Controller\IndexController.class.php 第 8 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\myblog\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  ORDER BY a.id desc LIMIT 10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: subtime D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 276 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T15:35:58+08:00 ] 127.0.0.1 /myblog/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\myblog\Application\Home\Controller\IndexController.class.php 第 8 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\myblog\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  ORDER BY a.id desc LIMIT 10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: subtime D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 276 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T15:45:13+08:00 ] 127.0.0.1 /myblog/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\myblog\Application\Home\Controller\IndexController.class.php 第 8 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\myblog\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  ORDER BY a.id desc LIMIT 10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: subtime D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 276 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T15:48:04+08:00 ] 127.0.0.1 /myblog/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\myblog\Application\Home\Controller\IndexController.class.php 第 8 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\myblog\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  ORDER BY a.id desc LIMIT 10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: subtime D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 276 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T15:49:22+08:00 ] 127.0.0.1 /myblog/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0000s ]
+NOTIC: [8] Use of undefined constant __PUBLIC__ - assumed '__PUBLIC__' D:\wamp\www\myblog\Application\Home\Controller\CommonController.class.php 第 78 行.
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\myblog\Application\Home\Controller\IndexController.class.php 第 8 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\myblog\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  ORDER BY a.id desc LIMIT 10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: subtime D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 276 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-27T15:50:03+08:00 ] 127.0.0.1 /myblog/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0020s ]
+SQL: SELECT `id`,`catename`,`type`,`keywords` FROM `cate` WHERE ( parentid>0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE ( rem=5 ) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `image` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `image` WHERE ( artid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=1 ) ORDER BY a.id desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT `keywords` FROM `article`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\myblog\Application\Home\Controller\IndexController.class.php 第 8 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\myblog\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT a.*,b.catename catename,b.id cateid FROM article a LEFT JOIN cate b ON a.cateid=b.id  ORDER BY a.id desc LIMIT 10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: subtime D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 276 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

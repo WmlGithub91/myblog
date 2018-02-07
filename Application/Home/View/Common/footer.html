@@ -1,0 +1,59 @@
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/assets/css/fhdb.css">
+  <div class="guide">
+    <div class="guide-wrap">
+
+        <a href="javascript:window.scrollTo(0,0)" class="top" title="回顶部"><span>回顶部</span></a>
+    </div>
+</div>
+<footer class="blog-footer">
+    <div class="am-g am-g-fixed blog-fixed am-u-sm-centered blog-footer-padding">
+        <div class="am-u-sm-12 am-u-md-4- am-u-lg-4">
+            <h3>网站介绍</h3>
+            <p class="am-text-sm">
+            我们可以耐心等，幸福可以来的慢一些，只要它是真的。<br> 
+            人生的路，走走停停是一种闲适， <br> 
+            边走边看是一种优雅，<br>
+            边走边忘是一种豁达。<br><br>
+            没有不会谢的花，没有不会退的浪，没有不会暗的光，<br> 
+            没有不会好的伤，没有不会停下来的绝望。<br><br>
+            -----------------------------等你，一起。
+            </p>
+        </div>
+        <div class="am-u-sm-12 am-u-md-4- am-u-lg-4">
+            <h3>社交账号</h3>
+            <p>
+                <a href="javascript:;"><span class="am-icon-qq am-icon-fw am-primary blog-icon blog-icon"></span></a>
+                <a href="javascript:;"><span class="am-icon-github am-icon-fw blog-icon blog-icon"></span></a>
+                <a href="javascript:;"><span class="am-icon-weibo am-icon-fw blog-icon blog-icon"></span></a>
+                <a href="javascript:;"><span class="am-icon-reddit am-icon-fw blog-icon blog-icon"></span></a>
+                <a href="javascript:;"><span class="am-icon-weixin am-icon-fw blog-icon blog-icon"></span></a>
+            </p>
+            <h3>友情链接</h3>
+            <p>
+            <ul>
+                <if condition="$links eq null ">
+                    <li><a href="javascript:;">等待中...</a></li>
+                <else/>
+                <foreach name="links" item="v">
+                    <li><a href="{$v['linkurl']}">{$v['linkname']}</a></li>
+                </foreach>
+                </if>
+                </ul>
+            </p>          
+        </div>
+        <div class="am-u-sm-12 am-u-md-4- am-u-lg-4">
+              <h1><a href="/">我们站在巨人的肩膀上</a></h1>
+             <h3>Heroes</h3>
+            <p>
+                <ul>
+                <foreach name="cates" item="v">
+                    <li><a href="__MODULE__/Study/index/cateid/{$v['id']}">{$v['catename']}</a></li>
+                </foreach>
+                </ul>
+            </p>
+        </div>
+    </div>    
+    <div class="blog-text-center">{$Think.config.BANQUAN}&nbsp;&nbsp;备案号:&nbsp;<a href="http://www.miitbeian.gov.cn/" target="_blank">{$Think.config.BEIAN}</a> &nbsp;</div>    
+  </footer>
+
+

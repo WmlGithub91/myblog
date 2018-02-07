@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>如影随形 - 后台管理</title>
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+    <!-- bootstrap -->
+    <link href="__PUBLIC__/Admin/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="__PUBLIC__/Admin/css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="__PUBLIC__/Admin/css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+
+    <!-- libraries -->
+    <link href="__PUBLIC__/Admin/css/lib/jquery-ui-1.10.2.custom.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/Admin/css/lib/font-awesome.css" type="text/css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/elements.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/page.css" />
+
+    <!-- this page specific styles -->
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/compiled/index.css" type="text/css" media="screen" />    
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/ip.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/jquery.js"></script>
+    <script type="text/javascript">
+        var pro = remote_ip_info["province"];
+        var city = remote_ip_info["city"];
+    </script>
+
+
+    <!-- open sans font -->
+    <!-- <link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' /> -->
+
+    <!-- lato font -->
+    <!-- <link href='http://fonts.useso.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css' /> -->
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>  
+textarea{ resize:none; width:60%; height:200px;}
+</style>
+</head>
+<body>
+
+    <!-- navbar -->
+<include file="Admin@Common:header" />
+    <!-- end navbar -->
+
+    <!-- sidebar -->
+<include file="Admin@Common:left" />
+    <!-- end sidebar -->
+
+
+	<!-- main container -->
+    <div class="content">
+
+        <div class="container-fluid">
+
+            <!-- upper main stats -->
+            <div id="main-stats">
+                <div class="row-fluid stats-row">
+                    <div class="span3 stat">
+                        <div class="data">
+                        {$Think.session.rolename}
+                            <span class="number">{$Think.session.username}</span>
+                            
+                        </div>
+                        <span class="date">today</span>
+                    </div>
+                    <div class="span3 stat">
+                        <div class="data">
+                            登陆地址
+                            <span class="number"><script type="text/javascript">document.write(pro)</script>-<script type="text/javascript">document.write(city)</script></span>
+                        </div>
+                        <span class="date"><?php echo date('Y-m-d');?></span>
+                    </div>
+                    <div class="span3 stat">
+                        <div class="data">
+                            登录IP
+                            <span class="number">{$realip}</span>
+                        </div>
+                        <span class="date"><?php echo date('H:i:s');?></span>
+                    </div>
+                   <div class="span3 stat last">
+                        <div class="data">
+                         <iframe width="370" scrolling="no" height="15" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=11&bgc=%23FFFFFF&icon=1"></iframe>
+                        </div>
+                        <span class="date">天气.预报</span>
+                    </div> 
+                </div>
+            </div>
+            <!-- end upper main stats -->
+
+            <div id="pad-wrapper">
+
+                <!-- statistics chart built with jQuery Flot -->
+                <div class="row-fluid chart">
+                    <h4>
+                        网站介绍&nbsp;:
+                         <div class="btn-group pull-right">
+
+                        </div>
+                    </h4>
+                    <div class="span12" style="font-size:16px;padding-right: 100px;padding-top: 30px;">
+                        <!-- <div id="statsChart"></div> -->
+<div style="width:1200px;height:300px;">
+
+<div style="float: left;width:800px;height:300px;">
+<?php echo htmlspecialchars_decode($ins['content']);?>
+
+</div>
+
+
+<div style="float: right;width:300px;height:300px;">
+      <img src="__PUBLIC__{$ins['logo_pic']}" alt=""  ></div>
+
+ </div>                     
+
+                        <p style="margin-left: 56%">
+                            
+<a href="{:U('edit')}"  class="btn-flat new-product">修改</a>
+
+                        </p>
+                    </div>
+                </div>
+                <!-- end statistics chart -->
+
+                <!-- table sample -->
+                <!-- the script for the toggle all checkboxes from header is located in js/theme.js -->
+                <!--
+                <div class="table-products section">
+                    <div class="row-fluid head">
+                        <div class="span12">
+                            <h4>轮播文章列表</h4>
+                        </div>
+                    </div>
+
+                    <div class="row-fluid filter-block">
+                        <div class="pull-right">
+
+                        <form action="{:U('Admin/Index/index')}" method="get"> 
+                                <div class="ui-dropdown">
+                                                <select name="cateid">
+                                                    <option name="" value="" />栏目分类搜索
+                                                <foreach name="cates" item="v">
+                                                    <option name="" value="{$v['id']}" /><?php echo str_repeat('-',$v['lev']*8);?>{$v['catename']}
+                                                </foreach>
+                                                </select>
+                                </div>
+                                 <input type="text" class="span5" name="keywords" placeholder="根据文章标题搜索" />
+                                <input type="submit" value="查询" style="margin-bottom: 10px; font-size: 12px;padding: 0.2px 3px; border-radius:5px; color:rgb(105, 109, 115);">
+
+                        </form>
+
+                        </div>
+         
+                    </div>
+
+                <form name="myform" id="myform" method="post">
+<input form="myform" formaction="{:U('Admin/Article/bdel')}" class="btn-flat new-product" type="submit" onclick="return confirm('你确定要批量删除吗!')" value="批量删除">
+                   <a href="{:U('Article/add')}" class="btn-flat new-product">+ 添加文章</a>
+                    <div class="row-fluid">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="span3">
+                                        <input type="checkbox" />
+                                        文章标题
+                                    </th>
+                                    <th class="span3">
+                                        <span class="line"></span>文章关键字
+                                    </th>                                    
+                                    <th class="span3">
+                                        <span class="line"></span>所属栏目
+                                    </th>
+                                    <th class="span3">
+                                        <span class="line"></span>发布时间
+                                    </th>
+                                    <th class="span3">
+                                        <span class="line"></span>文章状态
+                                    </th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                              
+<foreach name="arts" item="v">
+                                <tr class="first">
+                                    <td>
+                                       <input name="ids[]" value="{$v['id']}" class="check" type="checkbox">
+                                        <div class="img">
+                                            <if condition="$v['pic'] eq '' ">
+                                            <img src="__PUBLIC__/Admin/img/table-img.png" />
+                                            <else/>
+                                            <img width="28px;" height="28px;" src="__PUBLIC__{$v['pic']}" />
+                                            </if>
+                                        </div>
+                                        <a href="#">{$v['title']} </a>
+                                    </td>
+                                    <td class="description">
+                                        {$v['keywords']}
+                                    </td>   
+                                    <td class="description">
+                                        <span class="label label-success">  {$v['catename']}</span>
+                                    </td>
+                                    <td class="description">
+                                       <?php echo date('Y-m-d H:i:s',$v['subtime']);?>
+                                    </td>
+                                    <td>
+                                        <span class="label label-success">轮播推荐</span>
+                                        <ul class="actions">
+                                            <li><a href="{:U('Article/edit',array('id'=>$v['id']))}"><i class="table-edit"></i></a></li>
+                                            <li class="last"><a href="{:U('Article/del',array('id'=>$v['id']))}" onclick="return confirm('确定删除该文章吗?');"><i class="table-delete"></i></a></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+</foreach>
+
+                            </tbody>
+                        </table>
+                    </div>
+                     </form>
+                     {$page}
+
+
+                    
+                </div>
+                -->
+                <!-- end table sample -->
+            </div>
+        </div>
+    </div>
+
+
+	<!-- scripts -->
+    <script src="__PUBLIC__/Admin/js/jquery-latest.js"></script>
+    <script src="__PUBLIC__/Admin/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/Admin/js/jquery-ui-1.10.2.custom.min.js"></script>
+    <!-- knob -->
+    <!-- <script src="__PUBLIC__/Admin/js/jquery.knob.js"></script> -->
+    <!-- flot charts -->
+<!--     <script src="__PUBLIC__/Admin/js/jquery.flot.js"></script>
+    <script src="__PUBLIC__/Admin/js/jquery.flot.stack.js"></script>
+    <script src="__PUBLIC__/Admin/js/jquery.flot.resize.js"></script> -->
+    <script src="__PUBLIC__/Admin/js/theme.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+
+            // toggle form between inline and normal inputs
+            var $buttons = $(".toggle-inputs button");
+            var $form = $("form.new_user_form");
+
+            $buttons.click(function () {
+                var mode = $(this).data("input");
+                $buttons.removeClass("active");
+                $(this).addClass("active");
+
+                if (mode === "inline") {
+                    $form.addClass("inline-input");
+                } else {
+                    $form.removeClass("inline-input");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

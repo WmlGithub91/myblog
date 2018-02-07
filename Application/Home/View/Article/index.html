@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="{$Think.config.DES}">
+  <meta name="keywords" content="{$Think.config.KEYWORDS}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>{$Think.config.TITLE}</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="icon" type="image/png" href="__PUBLIC__/Home/assets/i/favicon.ico">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="__PUBLIC__/Home/assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="__PUBLIC__/Home/assets/i/app-icon72x72@2x.png">
+  <meta name="msapplication-TileImage" content="__PUBLIC__/Home/assets/i/app-icon72x72@2x.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+  <link rel="stylesheet" href="__PUBLIC__/Home/assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="__PUBLIC__/Home/assets/css/app.css">
+</head>
+
+<body id="blog-article-sidebar">
+<!-- header start -->
+<include file="Home@Common:header" />
+
+<!-- content srart -->
+<div class="am-g am-g-fixed blog-fixed blog-content">
+    <div class="am-u-md-8 am-u-sm-12">
+
+      <article class="am-article blog-article-p">
+        <div class="am-article-hd">
+          <h1 class="am-article-title blog-text-center">{$info['title']}</h1>
+          <p class="am-article-meta blog-text-center">
+              <span><a href="#" class="blog-color">{$info['catename']} &nbsp;</a></span>-
+              <span><a href="#">@{$info['author']} &nbsp;</a></span>-
+              <span><a href="#"><?php echo date('Y/m/d',$info['subtime']);?></a></span>
+          </p>
+        </div> 
+
+        <div class="am-article-bd">
+        <img width="765px;" height="430px;" src="__PUBLIC__{$info['pic']}" alt="" class="blog-entry-img blog-article-margin">          
+        <p class="class="am-article-lead"">
+<!-- 内容开始 -->
+ <?php echo htmlspecialchars_decode($info['content']);?>
+<!-- 内容结束 -->
+        </p>
+        </div>
+        <div>
+          来源:&nbsp;
+          <if condition="$info['url'] eq '' ">
+          <a href="<?php echo $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'] ;?>"><?php echo $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'] ;?></a>
+          <else />
+          <a href="{$info['url']}">{$info['url']}</a>
+          </if>
+        </div>
+      </article>
+        
+        <div class="am-g blog-article-widget blog-article-margin">
+          <div class="am-u-lg-4 am-u-md-5 am-u-sm-7 am-u-sm-centered blog-text-center">
+            <span class="am-icon-tags"> &nbsp;</span> <a href="__MODULE__/Index/index/keywords/{$info['keywords']}">{$info['keywords']}</a> 
+            <hr>
+            <a href=""><span class="am-icon-qq am-icon-fw am-primary blog-icon"></span></a>
+            <a href=""><span class="am-icon-wechat am-icon-fw blog-icon"></span></a>
+            <a href=""><span class="am-icon-weibo am-icon-fw blog-icon"></span></a>
+          </div>
+        </div>
+
+        <ul class="am-pagination blog-article-margin">
+              <li class="am-pagination-prev">
+                  <if condition="$prev['title'] eq '' ">
+                        <a href="javascript:;">&laquo;没有了</a>
+                  <else/>
+                        <a href="__CONTROLLER__/index/cateid/{$info['cateid']}/artid/{$prev['id']}" class="">&laquo;{$prev['title']}</a>
+                  </if>
+              </li>
+
+              <li class="am-pagination-next">
+                  <if condition="$next['title'] eq '' ">
+                        <a href="javascript:;">没有了&raquo;</a>
+                  <else/>
+                        <a href="__CONTROLLER__/index/cateid/{$info['cateid']}/artid/{$next['id']}">{$next['title']} &raquo;</a>
+                  </if>
+              </li>
+        </ul>
+
+        <hr>
+<!-- 评论开始 -->
+<foreach name="msgs" item="m">
+        <div class="am-g blog-author blog-article-margin">
+          <div class="am-u-sm-3 am-u-md-3 am-u-lg-2">
+            <img src="<if condition="$m['pic'] eq '' ">__PUBLIC__/Home/assets/i/avatar.jpg<else/>__PUBLIC__{$m['pic']}</if>" alt="" class="blog-author-img am-circle">
+          </div>
+          <div class="am-u-sm-9 am-u-md-9 am-u-lg-10">
+          <h3><span>昵称 &nbsp;: &nbsp;</span><span class="blog-color">{$m['name']}</span>&nbsp;&nbsp;<span>----------<?php echo date('Y-m-d H:i:s',$m['time']);?></span></h3>
+            <p>{$m['content']}</p>
+          </div>
+        </div>
+        <hr>
+</foreach>
+<!-- 评论结束 -->
+
+
+        
+        <hr>
+
+        <form class="am-form am-g" action="{:U('Article/msg_add')}" method="post" enctype="multipart/form-data" >
+            <h3 class="blog-comment">评论</h3>
+          <fieldset>
+          <input type="hidden" name="artid" value="{$info['id']}">
+          <input type="hidden" name="cateid" value="{$info['cateid']}">
+            <div class="am-form-group am-u-sm-4 blog-clear-left">
+              <input type="text" name="name" class="" placeholder="昵称">
+            </div>
+            <div class="am-form-group am-u-sm-4">
+              <input type="email" name="email" class="" placeholder="邮箱">
+            </div>
+
+  
+            <div class="am-form-group">
+            <span>上传头像:</span><input type="file" name="pic" class="" >
+            </div>
+
+        
+            <div class="am-form-group">
+              <textarea name="content" class="" rows="5" placeholder="一字千金"></textarea>
+            </div>
+        
+            <p><button type="submit" class="am-btn am-btn-default">发表评论</button></p>
+          </fieldset>
+        </form>
+
+        <hr>
+    </div>
+
+<include file="Home@Common:right" />
+
+
+
+</div>
+<!-- content end -->
+
+
+<include file="Home@Common:footer" />
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="__PUBLIC__/Home/assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="__PUBLIC__/Home/assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script src="__PUBLIC__/Home/assets/js/amazeui.min.js"></script>
+<!-- <script src="__PUBLIC__/Home/assets/js/app.js"></script> -->
+</body>
+</html>

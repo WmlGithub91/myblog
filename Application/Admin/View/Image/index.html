@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>如影随形 - 后台管理</title>
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+    <!-- bootstrap -->
+    <link href="__PUBLIC__/Admin/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="__PUBLIC__/Admin/css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="__PUBLIC__/Admin/css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/elements.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/page.css" />
+
+    <!-- libraries -->
+    <link href="__PUBLIC__/Admin/css/lib/font-awesome.css" type="text/css" rel="stylesheet" />
+    
+    <!-- this page specific styles -->
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/compiled/gallery.css" type="text/css" media="screen" />
+
+    <!-- open sans font -->
+    <!-- <link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' /> -->
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+
+    <!-- navbar -->
+<include file="Admin@Common:header" />
+    <!-- end navbar -->
+
+    <!-- sidebar -->
+<include file="Admin@Common:left" />
+    <!-- end sidebar -->
+
+
+	<!-- main container -->
+    <div class="content">
+
+        
+        <div class="container-fluid">
+            <div id="pad-wrapper" class="gallery">
+                <div class="row-fluid header">
+                    <h3>Gallery</h3>                    
+                </div>
+                          <form action="{:U('Admin/Image/index')}" method="get"> 
+                                <div class="ui-dropdown">
+                                                <select name="artid">
+                                                    <option name="" value="" />文章分类搜索
+                                                <foreach name="arts" item="v">
+                                                    <option name="" value="{$v['id']}" />{$v['title']}
+                                                </foreach>
+                                                </select>
+                                </div>
+                                 <!-- <input type="text" class="span5" name="keywords" placeholder="根据图片标题搜索" /> -->
+                                <input type="submit" value="查询" style="margin-bottom: 10px; font-size: 12px;padding: 0.2px 3px; border-radius:5px; color:rgb(105, 109, 115);">
+
+                          </form>
+
+
+                <!-- gallery wrapper -->
+                <div class="gallery-wrapper">
+                    <div class="row gallery-row">
+
+
+                        <!-- single image -->
+                        <div class="span3 img-container">
+                            <div class="img-box">
+                        <h5>Gallery</h5> 
+                                <span class="icon edit">
+                                    <i class="gallery-edit"></i>
+                                </span>
+                                <span class="icon trash">
+                                    <i class="gallery-trash"></i>
+                                </span>
+                                <img src="__PUBLIC__/Admin/img/gallery1.jpg" />
+                                <p class="title">
+                                    Beach pic title 3  【图片标题】
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- single image -->
+                        <div class="span3 img-container">
+                            <div class="img-box">
+                        <h5>Gallery</h5> 
+                                <span class="icon edit">
+                                    <i class="gallery-edit"></i>
+                                </span>
+                                <span class="icon trash">
+                                    <i class="gallery-trash"></i>
+                                </span>
+                                <img src="__PUBLIC__/Admin/img/gallery1.jpg" />
+                                <p class="title">
+                                    Beach pic title 3  【图片标题】
+                                </p>
+                            </div>
+                        </div>
+
+
+<!-- single image -->
+                        <div class="span3 img-container">
+                            <div class="img-box">
+                        <h5>Gallery</h5> 
+                                <span class="icon edit">
+                                    <i class="gallery-edit"></i>
+                                </span>
+                                <span class="icon trash">
+                                    <i class="gallery-trash"></i>
+                                </span>
+                                <img src="__PUBLIC__/Admin/img/gallery1.jpg" />
+                                <p class="title">
+                                    Beach pic title 3  【图片标题】
+                                </p>
+                            </div>
+                        </div>
+
+
+<!-- single image -->
+                        <div class="span3 img-container">
+                            <div class="img-box">
+                        <h5>Gallery</h5> 
+                                <span class="icon edit">
+                                    <i class="gallery-edit"></i>
+                                </span>
+                                <span class="icon trash">
+                                    <i class="gallery-trash"></i>
+                                </span>
+                                <img src="__PUBLIC__/Admin/img/gallery1.jpg" />
+                                <p class="title">
+                                    Beach pic title 3  【图片标题】
+                                </p>
+                            </div>
+                        </div>
+
+
+<!-- single image -->
+                        <div class="span3 img-container">
+                            <div class="img-box">
+                        <h5>Gallery</h5> 
+                                <span class="icon edit">
+                                    <i class="gallery-edit"></i>
+                                </span>
+                                <span class="icon trash">
+                                    <i class="gallery-trash"></i>
+                                </span>
+                                <img src="__PUBLIC__/Admin/img/gallery1.jpg" />
+                                <p class="title">
+                                    Beach pic title 3  【图片标题】
+                                </p>
+                            </div>
+                        </div>
+
+
+<!-- single image -->
+<foreach name="imgs" item="s" >
+                        <div class="span3 img-container">
+                            <div class="img-box">
+                        <h5>{$s['titles']}</h5> 
+                                <span class="icon edit">
+                                <a href="{:U('edit',array('id'=>$s['id']))}"><i class="gallery-edit"></i></a>
+                                  
+                                    
+                                </span>
+                                <span class="icon trash">
+                                  <a href="{:U('del',array('id'=>$s['id']))}" onclick="return confirm('确定删除该图片吗?');">  <i class="gallery-trash"></i></a>
+                                  
+                                </span>
+                                <img width="230px;" height="230px;" src="__PUBLIC__{$s['pic']}" />
+                                <p class="title">
+                                   {$s['title']}
+                                </p>
+                            </div>
+                        </div>
+
+</foreach>
+
+
+                        <!-- new image button -->
+                        <div class="span3 new-img">
+                         <h5>文章标题</h5> 
+                            <img id="new_img" src="__PUBLIC__/Admin/img/new-gallery-img.png" />
+                        </div>
+
+
+<!--                          <a href="#" id="new_img" class="btn-flat success pull-right">
+                            <span>&#43;</span>
+                            新增
+                        </a> -->
+
+                        <!-- edit image pop up -->
+<!--                         <div id="edit_img" class="popup" style="display: none;">
+                            <div class="pointer">
+                                <div class="arrow"></div>
+                                <div class="arrow_border"></div>
+                            </div>
+                            <i class="close-pop table-delete"></i>
+                            <h5>Edit Image</h5>
+                            <div class="thumb">
+                                <img src="__PUBLIC__/Admin/img/gallery-preview.jpg" />
+                            </div>
+                            <div class="title">
+                                <input type="text" class="inline-input" placeholder="Title" />
+                                <div class="ui-select">
+                                    <select>
+                                      <option />Category
+                                      <option />Mountains
+                                      <option />Lake and rivers
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <h6>Description</h6>
+                                <textarea></textarea>
+                                <input type="submit" value="Save" class="btn-glow primary" />
+                            </div>
+                        </div> -->
+
+                        <!-- add image pop up -->
+                    <form action="{:U('Admin/Image/add')}" method="post" enctype="multipart/form-data">
+                        <div id="add_img" class="popup" style="display: none;">
+                            <div class="pointer">
+                                <div class="arrow"></div>
+                                <div class="arrow_border"></div>
+                            </div>
+                            <i id="close" class="close-pop table-delete"></i>
+                            <h5>Add Image</h5>
+                            <div class="thumb">
+                                <img src="__PUBLIC__/Admin/img/gallery-preview.jpg" />
+
+                            </div>
+                            <div class="title">
+                                <input type="text" name="title" class="inline-input" placeholder="Title" />
+                                <div class="ui-select">
+                                    <select name="artid">
+                                    <option name="" value="" />文章分类搜索
+                                    <foreach name="arts" item="v">
+                                      <option value="{$v['id']}" />{$v['title']}
+                                    </foreach>
+                                    </select>
+                                </div>
+
+                                <input type="file" name="pic" value="" placeholder="">
+                            </div>
+                            <div class="description">
+                                <h6>Description</h6>
+                                <textarea name="des"></textarea>
+                                <input type="submit" value="Add" class="btn-glow primary" />
+                            </div>
+                        </div>
+                    </form>
+
+                    </div>
+<div>
+    {$page}
+</div>
+                </div>
+                <!-- end gallery wrapper -->
+
+                <!-- blank state -->
+<!--                  <div class="no-gallery">
+                    <div class="row-fluid header">
+                        <h3>Gallery Blank State</h3>
+                    </div>
+                    <div class="center">
+                        <img src="__PUBLIC__/Admin/img/no-img-gallery.png" />
+                        <h6>You don't have any images</h6>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
+                        <a class="btn-glow primary">Add new image</a>
+                    </div>
+                </div> -->
+                <!-- end blank state -->
+            </div>
+        </div>
+    </div>
+    <!-- end main container -->
+
+
+	<!-- this page scripts -->
+    <script src="__PUBLIC__/Admin/js/jquery-latest.js"></script>
+    <script src="__PUBLIC__/Admin/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/Admin/js/theme.js"></script>
+
+
+<script type="text/javascript">
+    $("#new_img").click(function(){
+        $("#add_img").css("display","block");
+    })
+
+    $("#close").click(function(){
+         $("#add_img").css("display","none");
+    })
+</script>
+
+</body>
+</html>

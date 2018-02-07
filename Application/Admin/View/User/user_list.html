@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>如影随形 - 后台管理</title>
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+    <!-- bootstrap -->
+    <link href="__PUBLIC__/Admin/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="__PUBLIC__/Admin/css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="__PUBLIC__/Admin/css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/elements.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/icons.css" />
+
+    <!-- libraries -->
+    <link href="__PUBLIC__/Admin/css/lib/font-awesome.css" type="text/css" rel="stylesheet" />
+    
+    <!-- this page specific styles -->
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/compiled/user-list.css" type="text/css" media="screen" />
+
+    <!-- open sans font -->
+    <!-- <link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' /> -->
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+
+    <!-- navbar -->
+<include file="Admin@Common:header" />
+    <!-- end navbar -->
+
+    <!-- sidebar -->
+<include file="Admin@Common:left" />
+    <!-- end sidebar -->
+    
+
+	<!-- main container -->
+    <div class="content">
+      
+        <div class="container-fluid">
+            <div id="pad-wrapper" class="users-list">
+                <div class="row-fluid header">
+                    <h3>Users</h3>
+                    <div class="span10 pull-right">
+                        <a href="{:U('user_add')}" class="btn-flat success pull-right">
+                            <span>&#43;</span>
+                            New User
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Users table -->
+                <div class="row-fluid table">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th class="span4 sortable">
+                                    管理员
+                                </th>
+                                <th class="span3 sortable">
+                                    <span class="line"></span>所属角色
+                                </th>
+                                 <th class="span3 sortable">
+                                    <span class="line"></span>注册时间
+                                </th>                               
+                                <th class="span3 sortable">
+                                    <span class="line"></span>操作
+                                </th>
+                            </tr>
+                        </thead>
+<foreach name="users" item="v">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <img src="<if condition="$v['head_pic'] eq '' ">__PUBLIC__/Admin/img/avatar.jpg<else/>__PUBLIC__/{$v['head_pic']}</if>" class="img-circle avatar hidden-phone" />
+                                <a href="" class="name">{$v['username']}</a>
+                                <span class="subtext">{$v['realname']}</span>
+                            </td>
+                            <td>
+                            <foreach name="roles" item="r">
+                            <if condition="$v['roleid'] eq $r['id']">
+                                {$r['rolename']}
+                            </if>
+                            </foreach>
+                            </td>
+
+                            <td>
+                            <?php echo date('Y-m-d',$v['reg_time']); ?>
+      
+                            </td>
+                         <td >
+                                    <a href="{:U('user_edit',array('id'=>$v['id']))}"><i class="table-edit"></i></a>&nbsp;&nbsp;
+                                    <a href="{:U('user_del',array('id'=>$v['id']))}" onclick="return confirm('确定删除该管理员吗?');"><i class="table-delete"></i></a>
+                        </td>
+                        </tr>
+                        </tbody>
+</foreach>
+                    </table>
+                </div>
+<!--                 <div class="pagination pull-right">
+                    <ul>
+                        <li><a href="#">&#8249;</a></li>
+                        <li><a class="active" href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">&#8250;</a></li>
+                    </ul>
+                </div> -->
+                <!-- end users table -->
+            </div>
+        </div>
+    </div>
+    <!-- end main container -->
+
+
+	<!-- scripts -->
+    <script src="__PUBLIC__/Admin/js/jquery-latest.js"></script>
+    <script src="__PUBLIC__/Admin/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/Admin/js/theme.js"></script>
+
+    
+        <script type="text/javascript">
+        $(function () {
+
+            // toggle form between inline and normal inputs
+            var $buttons = $(".toggle-inputs button");
+            var $form = $("form.new_user_form");
+
+            $buttons.click(function () {
+                var mode = $(this).data("input");
+                $buttons.removeClass("active");
+                $(this).addClass("active");
+
+                if (mode === "inline") {
+                    $form.addClass("inline-input");
+                } else {
+                    $form.removeClass("inline-input");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

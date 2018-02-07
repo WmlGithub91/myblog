@@ -1,0 +1,112 @@
+    <div id="sidebar-nav">
+        <ul id="dashboard-menu">
+<!--
+<?php $menu=session('menu');
+    foreach ($menu as $k=>$v):
+?>
+             <li <?php if($Think.CONTROLLER_NAME == 'Cate'){ echo 'class="active"';} ; ?>>
+                <a class="dropdown-toggle" href="#">
+                    <i class="icon-bar-chart"></i>
+                    <span><?php echo $v['pri_name'];?></span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                <ul class="submenu" <?php if($Think.CONTROLLER_NAME == 'Cate'){ echo 'style="display: block;"';} ; ?>>
+                <?php foreach($v['sub'] as $k1=>$v1):?>
+                    <li><a href="<?php echo U($v1['mname'].'/'.$v1['cname'].'/'.$v1['aname']);?>"><?php echo $v1['pri_name']; ?></a></li>
+                <?php endforeach;?>  
+                </ul>
+            </li>
+<?php endforeach;?>  
+-->          
+
+            <li  <?php if($Think.CONTROLLER_NAME == 'Index'){ echo 'class="active"';} ; ?> >
+                <div class="pointer">
+                    <div class="arrow"></div>
+                    <div class="arrow_border"></div>
+                </div>
+                <a href="{:U('Index/index')}">
+                    <i class="icon-home"></i>
+                    <span>后台首页</span>
+                </a>
+            </li>            
+            <li <?php if($Think.CONTROLLER_NAME == 'Cate'){ echo 'class="active"';} ; ?>>
+                <a class="dropdown-toggle" href="#">
+                    <i class="icon-bar-chart"></i>
+                    <span>栏目管理</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                <ul class="submenu" <?php if($Think.CONTROLLER_NAME == 'Cate'){ echo 'style="display: block;"';} ; ?>>
+                    <li><a href="{:U('Cate/lst')}">栏目列表</a></li>
+                    <li><a href="{:U('Cate/add')}">添加新栏目</a></li>
+                    <!-- <li><a href="user-profile.html">用户信息</a></li> -->
+                </ul>
+            </li>
+
+
+           <li <?php if($Think.CONTROLLER_NAME == 'Article'){ echo 'class="active"';} ; ?>>
+                <a class="dropdown-toggle" href="#">
+                    <i class="icon-edit"></i>
+                    <span>文章管理</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                <ul class="submenu" <?php if($Think.CONTROLLER_NAME == 'Article'){ echo 'style="display: block;"';} ; ?>>
+                    <li><a href="{:U('Article/lst')}">文章列表</a></li>
+                    <li><a href="{:U('Article/add')}">添加新文章</a></li>
+                </ul>
+            </li>
+            <li  <?php if($Think.CONTROLLER_NAME == 'User' || $Think.CONTROLLER_NAME == 'Role' || $Think.CONTROLLER_NAME == 'Privilege' ){ echo 'class="active"';} ; ?>>
+                <a class="dropdown-toggle" href="#">
+                    <i class="icon-group"></i>
+                    <span>用户管理</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                <ul class="submenu" <?php if($Think.CONTROLLER_NAME == 'User' || $Think.CONTROLLER_NAME == 'Role' || $Think.CONTROLLER_NAME == 'Privilege' ){ echo 'style="display: block;"';} ; ?>>
+                    <li><a href="{:U('User/user_list')}">用户列表</a></li>
+                    <li><a href="{:U('Role/lst')}">角色管理</a></li>
+                    <li><a href="{:U('Privilege/lst')}">权限管理</a></li>
+                </ul>
+            </li>
+
+              <li  <?php if($Think.CONTROLLER_NAME == 'Link' ){ echo 'class="active"';} ; ?>>
+                <a class="dropdown-toggle" href="#">
+                    <i class="icon-move"></i>
+                    <span>友情链接</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                <ul class="submenu" <?php if($Think.CONTROLLER_NAME == 'Link' ){ echo 'style="display: block;"';} ; ?>>
+                    <li><a href="{:U('Link/lst')}">友情链接列表</a></li>
+                    <li><a href="{:U('Link/add')}">新增友情链接</a></li>
+
+                </ul>
+            </li>
+            <li <?php if($Think.CONTROLLER_NAME == 'Log'){ echo 'class="active"';} ; ?> >
+                <a href="{:U('Log/login_log')}">
+                    <i class="icon-book"></i>
+                    <span>登录日志</span>
+                </a>
+
+            </li>
+            <li>
+                <a href="{:U('Image/index')}">
+                    <i class="icon-picture"></i>
+                    <span>相册管理</span>
+                </a>
+            </li>          
+
+            
+            <li>
+                <a href="{:U('System/index')}">
+                    <i class="icon-cog"></i>
+                    <span>网站设置</span>
+                </a>
+            </li>    
+
+              <li>
+                <a href="{:U('Msg/index')}">
+                    <i class="icon-comments"></i>
+                    <span>评论管理</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>

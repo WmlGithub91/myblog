@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>如影随形 - 后台管理</title>
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+    <!-- bootstrap -->
+    <link href="__PUBLIC__/Admin/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="__PUBLIC__/Admin/css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="__PUBLIC__/Admin/css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+
+    <!-- libraries -->
+    <link href="__PUBLIC__/Admin/css/lib/bootstrap-wysihtml5.css" type="text/css" rel="stylesheet" />
+    <link href="__PUBLIC__/Admin/css/lib/uniform.default.css" type="text/css" rel="stylesheet" />
+    <link href="__PUBLIC__/Admin/css/lib/select2.css" type="text/css" rel="stylesheet" />
+    <link href="__PUBLIC__/Admin/css/lib/bootstrap.datepicker.css" type="text/css" rel="stylesheet" />
+    <link href="__PUBLIC__/Admin/css/lib/font-awesome.css" type="text/css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/elements.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/icons.css" />
+    
+    <!-- this page specific styles -->
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/compiled/form-showcase.css" type="text/css" media="screen" />
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/ueditor.all.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/lang/zh-cn/zh-cn.js"></script>
+
+    <!-- open sans font -->
+    <!-- <link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' /> -->
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+
+    <!-- navbar -->
+<include file="Admin@Common:header" />
+    <!-- end navbar -->
+
+    <!-- sidebar -->
+<include file="Admin@Common:left" />
+    <!-- end sidebar -->
+
+
+	<!-- main container -->
+    <div class="content">
+        
+        <div class="container-fluid">
+            <div id="pad-wrapper" class="form-page">
+                <div class="row-fluid form-wrapper">
+    
+                            <div class="row-fluid header">
+                    <h3>网站介绍与logo设置</h3>
+
+                </div>
+
+                    <!-- left column -->
+                    <div class="span8 column">
+                        <form action="" method="post" class="new_user_form inline-input" enctype="multipart/form-data" />
+                          <input type="hidden" name="id" value="{$ins['id']}">
+                              <div class="field-box">
+                                <label>网站logo:</label>
+                                <input type="file" name="logo_pic" value="" placeholder="">
+                                <img width="150px;" height="150px;" src="__PUBLIC__{$ins['logo_pic']}" alt="">
+
+                            </div>                                
+                                                    
+                            <div class="field-box">
+                                <label>后台首页内容:</label>
+                                <textarea id="content" name="content" class="span8" rows="4" style="margin-left: 0px;">{$ins['content']}</textarea>
+                            </div>                    
+                                <div class="span11 field-box actions" style="margin-left: 700px;">
+                                    <input type="submit" class="btn-glow primary" value="确认修改" />
+                                </div>
+                        </form>
+                    </div>
+
+                    <!-- right column -->
+
+    <!-- end main container -->
+
+	<!-- scripts for this page -->
+    <script src="__PUBLIC__/Admin/js/wysihtml5-0.3.0.js"></script>
+    <script src="__PUBLIC__/Admin/js/jquery-latest.js"></script>
+    <script src="__PUBLIC__/Admin/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/Admin/js/bootstrap-wysihtml5-0.0.2.js"></script>
+    <script src="__PUBLIC__/Admin/js/bootstrap.datepicker.js"></script>
+    <script src="__PUBLIC__/Admin/js/jquery.uniform.min.js"></script>
+    <script src="__PUBLIC__/Admin/js/select2.min.js"></script>
+    <script src="__PUBLIC__/Admin/js/theme.js"></script>
+
+    <!-- call this page plugins -->
+    <script type="text/javascript">
+        $(function () {
+
+            // add uniform plugin styles to html elements
+            $("input:checkbox, input:radio").uniform();
+
+            // select2 plugin for select elements
+            $(".select2").select2({
+                placeholder: "Select a State"
+            });
+
+            // datepicker plugin
+            $('.datepicker').datepicker().on('changeDate', function (ev) {
+                $(this).datepicker('hide');
+            });
+
+            // wysihtml5 plugin on textarea
+            $(".wysihtml5").wysihtml5({
+                "font-styles": false
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+    UE.getEditor('content',{initialFrameWidth:900,initialFrameHeight:400,});
+</script>
+
+</body>
+</html>

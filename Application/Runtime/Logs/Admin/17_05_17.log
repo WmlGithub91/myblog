@@ -1,0 +1,704 @@
+[ 2017-05-17T12:06:41+08:00 ] 127.0.0.1 /meng/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-17T12:06:44+08:00 ] 127.0.0.1 /meng/index.php/Admin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-17T12:06:44+08:00 ] 127.0.0.1 /meng/index.php/Admin/Login/index/pro/%E6%B9%96%E5%8C%97?city=%E6%AD%A6%E6%B1%89
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-17T12:06:50+08:00 ] 127.0.0.1 /meng/index.php/Admin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `user` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `role` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `privilege`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `role` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `privilege` WHERE ( parentid=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `privilege` WHERE ( parentid=1 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `privilege` WHERE ( parentid=8 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `privilege` WHERE ( parentid=12 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `privilege` WHERE ( parentid=13 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `privilege` WHERE ( parentid=14 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `privilege` WHERE ( parentid=18 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `login_log` [ RunTime:0.0020s ]
+SQL: INSERT INTO `login_log` (`username`,`realname`,`head_pic`,`ip`,`address`,`time`) VALUES ('admin','小明','/Uploads/2017-05-06/590d7f00c5e92.jpg','127.0.0.1','湖北武汉','1494994010') [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-17T12:06:51+08:00 ] 127.0.0.1 /meng/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `content_logo` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `content_logo` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( rem=5 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=5 ) ORDER BY a.id desc LIMIT 0,8   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 139 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 145 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 139 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 145 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 139 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 145 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 139 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 145 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 139 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 145 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 139 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 145 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 154 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 164 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 170 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 178 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 184 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 189 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 189 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 189 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 195 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 195 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 195 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 202 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 208 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 214 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-17T12:07:13+08:00 ] 127.0.0.1 /meng/index.php/Admin/Article/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 136 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 136 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 136 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 136 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 136 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 136 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 145 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 155 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 161 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 169 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 175 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 180 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 180 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 180 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 186 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 186 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 186 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 193 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 199 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 205 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-17T12:16:52+08:00 ] 127.0.0.1 /meng/index.php/Admin/Article/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\meng\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: INSERT INTO `article` (`title`,`keywords`,`author`,`des`,`content`,`rem`,`cateid`,`subtime`,`pic`) VALUES ('恋爱半年还没接过吻 木讷男友让女友伤透脑筋','情侣,接吻','小Y','恋爱是时下最不会过时的话题，也是人一生的必经过程之一。恋爱中，情侣中都会做一些亲昵的举动来增加彼此的感情。然而，日前却有一个27岁的女性称与男友交往半年之久，连接吻都没有过，让她非常苦恼。','&lt;p&gt;&lt;img src=&quot;/ueditor/php/upload/image/20170517/1494994551107291.jpg&quot; title=&quot;恋爱半年还没接过吻 木讷男友让女友伤透脑筋&quot; alt=&quot;恋爱半年还没接过吻 木讷男友让女友伤透脑筋&quot; style=&quot;vertical-align: middle; border: none; width: initial; display: block; margin: 0px auto 30px; max-width: 100%; cursor: pointer; color: rgb(51, 51, 51); font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; margin-bottom: 20px; padding: 0px; line-height: 36px; color: rgb(51, 51, 51); text-indent: 2em; font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;日前，记者在北城天街茂业天地门口见到方蔷，她身高约1米6，不胖不瘦，披散着头发，有些没精打采。昨天恰逢降温，她穿了一件薄羽绒服外套，“有男朋友跟没得一样，只能自己多穿点。”她打趣地说，表情却有些无奈。&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; margin-bottom: 20px; padding: 0px; line-height: 36px; color: rgb(51, 51, 51); text-indent: 2em; font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;方蔷家住南坪海棠晓月小区，在渝北区一家服装设计公司做市场策划。男友小舒和她同岁，是方蔷高中同学的好友，两人去年年底在聚会上认识。在聚会上，方蔷对小舒一见钟情。“我们当时在观音桥的纯K唱歌，他唱歌超级好听，还会弹吉他，我对这种有才华的男生完全没有抵抗力。”通过好友得知，小舒是重大毕业的研究生，在汽车设计院上班，目前还是单身。“据说他工作挺忙，都没怎么谈过恋爱，我在川美读书，也没怎么谈过，我觉得我们特别合适。”聚会上，她主动加了小舒的微信。&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/ueditor/php/upload/image/20170517/1494994551825306.jpg&quot; title=&quot;恋爱半年还没接过吻 木讷男友让女友伤透脑筋&quot; alt=&quot;恋爱半年还没接过吻 木讷男友让女友伤透脑筋&quot; style=&quot;vertical-align: middle; border: none; width: initial; display: block; margin: 0px auto 30px; max-width: 100%; cursor: pointer; color: rgb(51, 51, 51); font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; margin-bottom: 20px; padding: 0px; line-height: 36px; color: rgb(51, 51, 51); text-indent: 2em; font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;俗语说“女追男隔层纱”，方蔷很快追到了小舒。“追他确实比我想象中容易，我们一起单独吃过两次饭，我生日那天，我就跟他告白，他笑了笑就答应了。”方蔷说，这是她第一次追求男生，连她自己也没有想到会那么顺利。&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; margin-bottom: 20px; padding: 0px; line-height: 36px; color: rgb(51, 51, 51); text-indent: 2em; font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;接下来，他们跟大多数情侣一样，通知了双方的父母，也见了彼此的朋友，一切都是按部就班。但渐渐的，方蔷觉得有些“不对劲”，这个自己追来的男友，似乎比自己想象中更加迟钝。“爸妈也知道了，我想我们应该是谈恋爱了噻。”方蔷就想等着享受小舒照顾自己的甜蜜，现实却不是这样。因为工作性质，小舒平时都在外地和区县，只有周末才可以陪方蔷。&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/ueditor/php/upload/image/20170517/1494994552516424.jpg&quot; title=&quot;恋爱半年还没接过吻 木讷男友让女友伤透脑筋&quot; alt=&quot;恋爱半年还没接过吻 木讷男友让女友伤透脑筋&quot; style=&quot;vertical-align: middle; border: none; width: initial; display: block; margin: 0px auto 30px; max-width: 100%; cursor: pointer; color: rgb(51, 51, 51); font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; margin-bottom: 20px; padding: 0px; line-height: 36px; color: rgb(51, 51, 51); text-indent: 2em; font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;但两人的恋爱方式，方蔷说单调得受不了。要么陪小舒的同学吃饭，要么就是下午看个电影然后找个地方吃饭。吃完饭，自己还想和男友多呆一会儿，但男友完全懂不起，吃完饭陪她散散步，不到一个小时就开车送她回家。&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; margin-bottom: 20px; padding: 0px; line-height: 36px; color: rgb(51, 51, 51); text-indent: 2em; font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;方蔷说，刚开始在一起那两个月，自己几乎感觉不到是在恋爱，直到恋爱两个月后自己主动暗示了小舒，两人才牵了手。两个月才牵手，这个速度让方蔷被无数朋友吐槽，她无奈地告诉记者，恋爱近半年，他们连吻都没接过。&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/ueditor/php/upload/image/20170517/1494994552471241.jpg&quot; title=&quot;恋爱半年还没接过吻 木讷男友让女友伤透脑筋&quot; alt=&quot;恋爱半年还没接过吻 木讷男友让女友伤透脑筋&quot; style=&quot;vertical-align: middle; border: none; width: initial; display: block; margin: 0px auto 30px; max-width: 100%; cursor: pointer; color: rgb(51, 51, 51); font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; margin-bottom: 20px; padding: 0px; line-height: 36px; color: rgb(51, 51, 51); text-indent: 2em; font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;为此，方蔷不知道生过多少次闷气。“每次我和朋友说这个事情，他们都笑我，说我男友有问题，让我主动，可是要我主动一辈子吗？”方蔷说，表白是她鼓起勇气表白的，可是一想到以后任何亲密行为都要自己先站出来，她真的无法想象。“而且这样也太随便了，他心里会看不起我。”&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; margin-bottom: 20px; padding: 0px; line-height: 36px; color: rgb(51, 51, 51); text-indent: 2em; font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;“我曾经想过，他对我那么木，是不是不喜欢我。”方蔷说，自己有认真思考过这个问题，甚至想过如果小舒不喜欢自己就分手。但是除了行为不太主动，其他方面小舒都对方蔷十分关心，每天晚上无论在哪里都会给方蔷打电话，还会监督方蔷早点睡觉，小舒唱歌好听，晚上还会给方蔷打电话唱她喜欢的歌，如果说小舒不喜欢自己，方蔷也觉得不合逻辑。而小舒的迟迟“不行动”也让她伤透了脑筋。方蔷的闺蜜，家住上品十六小区的杨小姐说，方蔷不知道和自己吐槽多少次，“她说小舒是不是没谈过恋爱，什么都不懂。”&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/ueditor/php/upload/image/20170517/1494994552970667.jpg&quot; title=&quot;恋爱半年还没接过吻 木讷男友让女友伤透脑筋&quot; alt=&quot;恋爱半年还没接过吻 木讷男友让女友伤透脑筋&quot; style=&quot;vertical-align: middle; border: none; width: initial; display: block; margin: 0px auto 30px; max-width: 100%; cursor: pointer; color: rgb(51, 51, 51); font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; margin-bottom: 20px; padding: 0px; line-height: 36px; color: rgb(51, 51, 51); text-indent: 2em; font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;昨日，记者通过方蔷的微信，以方蔷闺蜜的名义和小舒聊天，小舒不算很健谈，但言语之间都十分礼貌。小舒还说，他还没见过方蔷的朋友，如果记者有空的话，等端午节放假，他会请方蔷的姐妹们吃饭，当作正式介绍。“不抽烟，不喝酒，生活习惯也不错。”方蔷说，唯一不满的就是，“像根木头一样。”&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;','1','2','1494994612','/Uploads/2017-05-17/591bceb46ffef.jpg') [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-17T12:16:53+08:00 ] 127.0.0.1 /meng/index.php/Admin/Article/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0020s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\meng\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\meng\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  ORDER BY a.id desc LIMIT 0,8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 139 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 149 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 155 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 163 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 169 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 174 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 174 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 174 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 180 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 180 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 180 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 187 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 193 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 199 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-17T12:17:16+08:00 ] 127.0.0.1 /meng/index.php/Admin/Article/bdel.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] unlink(./Public): Permission denied D:\wamp\www\meng\Application\Admin\Controller\ArticleController.class.php 第 150 行.
+SQL: SELECT * FROM `article` WHERE `id` = 19 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] unlink(./Public): Permission denied D:\wamp\www\meng\Application\Admin\Controller\ArticleController.class.php 第 150 行.
+SQL: SELECT * FROM `article` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` = 14 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+SQL: DELETE FROM `article` WHERE `id` IN ('20','19','15','14','13','12') [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-17T12:17:17+08:00 ] 127.0.0.1 /meng/index.php/Admin/Article/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\meng\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\meng\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  ORDER BY a.id desc LIMIT 0,8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 139 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 149 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 155 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 163 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 169 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 174 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 174 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 174 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 180 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 180 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 180 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 187 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 193 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 199 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-17T12:17:34+08:00 ] 127.0.0.1 /meng/index.php/Admin/Article/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 136 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 136 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 136 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 136 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 136 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 136 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 145 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 155 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 161 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 169 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 175 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 180 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 180 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 180 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 186 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 186 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 186 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 193 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 199 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 205 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-17T12:19:35+08:00 ] 127.0.0.1 /meng/index.php/Admin/Article/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\meng\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: INSERT INTO `article` (`title`,`keywords`,`author`,`des`,`content`,`rem`,`cateid`,`subtime`,`pic`) VALUES ('韩总统保镖颜值爆表 被网友封为“青瓦台F4”','文在寅,保镖','小P','上周，韩国举行总统大选，文在寅以百分之七十七的高支持率当选新一任总统，文在寅当选之后，他身边一位年轻帅气的保镖也随之走红。长相帅气的他也成了媒体关注的对象，甚至还被网友称为是“青瓦台F4”。我们一起来看看吧！','&lt;p&gt;&lt;img title=&quot;韩总统保镖颜值爆表 被网友封为“青瓦台F4”&quot; src=&quot;/ueditor/php/upload/image/20170517/1494994738113350.jpg&quot; style=&quot;vertical-align: middle; border: none; width: initial; display: block; margin: 0px auto 30px; max-width: 100%; cursor: pointer; color: rgb(51, 51, 51); font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; margin-bottom: 20px; padding: 0px; line-height: 36px; color: rgb(51, 51, 51); text-indent: 2em; font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;据媒体报道，韩国上周举行总统大选，最后由律师出身的文在寅拿下总统宝座，本届韩国总统大选不仅创下二十年来投票率最高，文在寅也拿下百分之七十七的高支持率，显见韩国民众关注大选程度。事实上，除了大选议题本身，在竞选过程中文在寅身旁的一名随员也引起外界关注，原因在于他的超高颜值。&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; margin-bottom: 20px; padding: 0px; line-height: 36px; color: rgb(51, 51, 51); text-indent: 2em; font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;这名随员名叫崔英载，今年36岁，特战队军官出生，在竞选过程中负责文在寅的人身安全护卫，在网络流传的照片中，崔英载西装笔挺、眼神犀利地站在文在寅身旁，随时监看总统候选人身边的环境变动，帅气英姿十分引人注目。&lt;/p&gt;&lt;p&gt;&lt;img title=&quot;韩总统保镖颜值爆表 被网友封为“青瓦台F4”&quot; src=&quot;/ueditor/php/upload/image/20170517/1494994739136798.jpg&quot; style=&quot;vertical-align: middle; border: none; width: initial; display: block; margin: 0px auto 30px; max-width: 100%; cursor: pointer; color: rgb(51, 51, 51); font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; margin-bottom: 20px; padding: 0px; line-height: 36px; color: rgb(51, 51, 51); text-indent: 2em; font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;现在这名新任总统身旁的帅气随员不仅在韩国造成热议，还红到海外。许多外国网友看到崔英载的样貌，纷纷赞赏他仿佛是从韩剧走出来的“帅气欧巴”。还有网友开玩笑地表示：“我也需要被保护!”虽然这名随员的超高颜值及工作时的认真眼神让许多女性爆发少女心，然而可惜的是根据韩国媒体报道，这位“帅气欧巴”已经是人夫，家里还有两个女儿。&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; margin-bottom: 20px; padding: 0px; line-height: 36px; color: rgb(51, 51, 51); text-indent: 2em; font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;报道称，除了文在寅身旁年轻一辈的帅气随员引发关注，52岁新任青瓦台民政首席秘书曹国、51岁新任青瓦台秘书长任钟皙，也因为帅气的大叔外貌成为媒体关注对象，三人加上文在寅被韩国网友封为“青瓦台F4”。&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;','1','4','1494994775','/Uploads/2017-05-17/591bcf57ba757.jpg') [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-17T12:19:36+08:00 ] 127.0.0.1 /meng/index.php/Admin/Article/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\meng\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\meng\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  ORDER BY a.id desc LIMIT 0,8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 139 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 149 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 155 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 163 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 169 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 174 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 174 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 174 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 180 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 180 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 180 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 187 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 193 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 199 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-17T12:20:23+08:00 ] 127.0.0.1 /meng/index.php/Admin/Article/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 136 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 136 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 136 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 136 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 136 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 136 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 145 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 155 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 161 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 169 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 175 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 180 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 180 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 180 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 186 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 186 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 186 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 193 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 199 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\e16cf278f1c326e72baf6415dbd5ab87.php 第 205 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-17T12:21:41+08:00 ] 127.0.0.1 /meng/index.php/Admin/Article/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\meng\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: INSERT INTO `article` (`title`,`keywords`,`author`,`des`,`content`,`rem`,`cateid`,`subtime`,`pic`) VALUES ('人肉代购将被限 自用合理数量是如何界定的','人肉代购,海外代购,代购','小Y','人肉代购将被限。从6月1日起，《关于暂不予放行旅客行李物品暂存有关事项的公告》正式施行，公告称：中国旅客进境携带在海外获取的个人自用进境物品，若不在“自用合理数量”范围内，海关将暂不予放行。那么自用合理数量是如何界定的呢?','&lt;p&gt;&lt;img alt=&quot;人肉代购将被限 自用合理数量是如何界定的&quot; src=&quot;/ueditor/php/upload/image/20170517/1494994875136367.jpg&quot; width=&quot;550&quot; height=&quot;325&quot; style=&quot;vertical-align: middle; border: none; width: initial; display: block; margin: 0px auto 30px; max-width: 100%; cursor: pointer; color: rgb(51, 51, 51); font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; margin-bottom: 20px; padding: 0px; line-height: 36px; color: rgb(51, 51, 51); text-indent: 2em; font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;6月1日起，中国海关总署《关于暂不予放行旅客行李物品暂存有关事项的公告》正式施行，明确规定5类入境行李不予放行，执行针对入境旅客的行李和入境快件的全面监管。中国海关总署网站发布的2016年第14号公告正式实施。公告规定，中国旅客进境携带在海外获取的个人自用进境物品，若不在“自用合理数量”范围内，海关将暂不予放行，并对物品进行暂存。&lt;/p&gt;&lt;p&gt;&lt;img alt=&quot;人肉代购将被限 自用合理数量是如何界定的&quot; src=&quot;/ueditor/php/upload/image/20170517/1494994875471198.jpg&quot; width=&quot;550&quot; height=&quot;366&quot; style=&quot;vertical-align: middle; border: none; width: initial; display: block; margin: 0px auto 30px; max-width: 100%; cursor: pointer; color: rgb(51, 51, 51); font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; margin-bottom: 20px; padding: 0px; line-height: 36px; color: rgb(51, 51, 51); text-indent: 2em; font-family: &amp;quot;Microsoft YaHei&amp;quot;, SimHei, 黑体, &amp;quot;Apple LiGothic Medium&amp;quot;, 苹果丽中黑, SimSun, 宋体, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;业内人士对新政的理解是，比如：以皮鞋为例，个人正常携带一两双皮鞋进境不会受影响，但如果一名旅客携带五六双甚至更多同一款式的皮鞋进境，就可能被认定为用于商业用途，不予放行。也就是说，如果在海外购物数量太大，又或者是“人肉代购”的话，在入关时将面临行李被扣暂存的问题。&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;','1','3','1494994901','/Uploads/2017-05-17/591bcfd517dc7.jpg') [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-17T12:21:42+08:00 ] 127.0.0.1 /meng/index.php/Admin/Article/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\meng\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\meng\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  ORDER BY a.id desc LIMIT 0,8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 124 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 130 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 139 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 149 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 155 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 163 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 169 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 174 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 174 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 174 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 180 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 180 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 180 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 187 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 193 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\3233ce5cce332a117b52d9b8831cbcfa.php 第 199 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-17T17:05:38+08:00 ] 127.0.0.1 /meng/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `content_logo` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `content_logo` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( rem=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.catename catename FROM article a LEFT JOIN cate b ON a.cateid=b.id  WHERE ( rem=5 ) ORDER BY a.id desc LIMIT 0,8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 139 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 145 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 139 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 145 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 139 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 145 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 139 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 145 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 139 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 145 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 139 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 145 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 154 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 164 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 170 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 178 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 184 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 189 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 189 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 189 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 195 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 195 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 195 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 202 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 208 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 214 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-17T17:05:39+08:00 ] 127.0.0.1 /meng/index.php/Admin/Cate/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` ORDER BY sort asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 123 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 129 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 123 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 129 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 123 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 129 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 123 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 129 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 123 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 129 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 123 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 129 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 138 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 148 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 154 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 162 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 168 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 173 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 173 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 173 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 179 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 179 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 179 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 186 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 192 行.
+NOTIC: [8] Undefined variable: Think D:\wamp\www\meng\Application\Runtime\Cache\Admin\1e31b38d8d9702701609b47afd2fec77.php 第 198 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

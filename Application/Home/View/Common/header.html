@@ -1,0 +1,61 @@
+<header class="am-g am-g-fixed blog-fixed blog-text-center blog-header">
+    <div class="am-u-sm-8 am-u-sm-centered">
+        <img width="200" src="__PUBLIC__/Home/assets/i/amazeui-b.png" alt="Amaze UI Logo"/>
+        <h2 class="am-hide-sm-only">-----------从你的世界路过</h2>
+    </div>
+</header>
+
+<hr>
+<nav class="am-g am-g-fixed blog-fixed blog-nav">
+<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only blog-button" data-am-collapse="{target: '#blog-collapse'}" ><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+  <div class="am-collapse am-topbar-collapse" id="blog-collapse">
+    <ul class="am-nav am-nav-pills am-topbar-nav">
+
+      <li class="<if condition="$on eq '' ">am-active</if>"><a href="/">首页</a></li>
+
+      <li class="am-dropdown " data-am-dropdown>
+        <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+          学无止境 <span class="am-icon-caret-down"></span>
+        </a>
+        <ul class="am-dropdown-content">
+        <foreach name="cates" item="v">
+          <li><a href="__MODULE__/Study/index/cateid/{$v['id']}">{$v['catename']}</li>       
+      </foreach>
+        </ul>
+      </li>
+
+      <li class="<if condition="$on eq '8' ">am-active</if>"><a href="{:U('Home/Riji/index/cateid/8')}">随笔</a></li>     
+      <li class="<if condition="$on eq '9' ">am-active</if>"><a href="{:U('Home/Img/index/cateid/9')}">图片库</a></li>
+      <li class="<if condition="$on eq '10' ">am-active</if>"><a href="{:U('Home/Timeline/index/cateid/10')}">存档</a></li>
+
+    </ul>
+
+    <form class="am-topbar-form am-topbar-right am-form-inline" role="search" action="{:U('Home/Index/index')}" method="get"> 
+      <div class="am-form-group">
+        <input type="text" name="keywords" class="am-form-field am-input-sm" placeholder="输入关键词" value="{$k}" style="border-radius:5px;">
+        <input type="submit" value="全文搜索" style=" font-size: 16px;padding: 0.2px 3px; border-radius:5px; color:rgb(105, 109, 115);">
+      </div>
+    </form>
+  </div>
+</nav>
+
+<hr>
+<br>
+<nav class="am-g am-g-fixed blog-fixed blog-nav">
+
+
+  <div class="am-collapse am-topbar-collapse" id="blog-collapse">
+
+      当前位置:&nbsp;<a href="/myblog">首页</a>
+<foreach name="mbx" item="x">
+      &gt;<a href="__MODULE__/<if condition="$x['type'] eq 1">Study<elseif condition="$x['type'] eq 2" />Riji<elseif condition="$x['type'] eq 3" />Img<elseif condition="$x['type'] eq 4" />Timeline</if>/index/cateid/{$x['id']}">{$x['catename']}</a>
+</foreach>
+
+
+
+  </div>
+
+</nav>
+
+

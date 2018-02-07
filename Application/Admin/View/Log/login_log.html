@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>如影随形 - 后台管理</title>
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+    <!-- bootstrap -->
+    <link href="__PUBLIC__/Admin/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="__PUBLIC__/Admin/css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="__PUBLIC__/Admin/css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/elements.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/page.css" />
+
+    <!-- libraries -->
+    <link href="__PUBLIC__/Admin/css/lib/font-awesome.css" type="text/css" rel="stylesheet" />
+    
+    <!-- this page specific styles -->
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/compiled/tables.css" type="text/css" media="screen" />
+
+    <!-- open sans font -->
+    <!-- <link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' /> -->
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+
+    <!-- navbar -->
+<include file="Admin@Common:header" />
+    <!-- end navbar -->
+
+    <!-- sidebar -->
+<include file="Admin@Common:left" />
+    <!-- end sidebar -->
+
+
+	<!-- main container -->
+    <div class="content">
+        
+        
+        <div class="container-fluid">
+            <div id="pad-wrapper">
+                
+
+                <!-- users table -->
+                <div class="table-wrapper users-table section">
+                    <div class="row-fluid head">
+                        <div class="span12">
+                            <h4>Login_log</h4>
+                        </div>
+                    </div>
+
+                    <div class="row-fluid filter-block">
+                        <div class="pull-right">
+                        <form action="{:U('Log/login_log')}" method="get">
+                            <!-- <a class="btn-flat pull-right success new-product add-user">+ Add user</a> -->
+                            <input type="text" name="keywords" placeholder="Search for log.." />
+                            <input type="submit" name="" value="查询" style="margin-bottom: 10px; font-size: 12px;padding: 0.2px 3px; border-radius:5px; color:rgb(105, 109, 115);">
+                            </form>
+                        </div>
+                    </div>
+                
+                    <div class="row-fluid">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="span4">
+                                        Name
+                                    </th>
+
+                                    <th class="span2">
+                                        <span class="line"></span>address
+                                    </th>
+                                    <th class="span3 ">
+                                        <span class="line"></span>ip
+                                    </th>
+                                    <th class="span3">
+                                        <span class="line"></span>Login time
+                                    </th>
+                                </tr>
+                            </thead>
+                            <foreach name="info" item="v">
+                            <tbody>
+                                <!-- row -->
+                                <tr class="first">
+                                    <td>
+                                        <img src="__PUBLIC__{$v['head_pic']}" class="img-circle avatar hidden-phone" />
+                                        <a href="" class="name">{$v['username']}</a>
+                                        <span class="subtext">{$v['realname']}</span>
+                                    </td>
+                                    <td>
+                                        {$v['address']}
+                                    </td>
+                                    <td>
+                                      {$v['ip']}
+                                    </td>
+                                    <td>
+                                  <?php echo date('Y-m-d H:i:s',$v['time']); ?>
+                                    </td>
+                                </tr>
+                            </tbody>
+                          </foreach>  
+                        </table>
+                    </div>
+
+              {$page}
+ 
+                   
+    
+                </div>
+                <!-- end users table -->
+            </div>
+        </div>
+    </div>
+    <!-- end main container -->
+
+	<!-- scripts -->
+    <script src="__PUBLIC__/Admin/js/jquery-latest.js"></script>
+    <script src="__PUBLIC__/Admin/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/Admin/js/theme.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/Admin/js/ip.js"></script>
+
+</body>
+</html>

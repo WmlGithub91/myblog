@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>慕课商城 - 后台管理</title>
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+    <!-- bootstrap -->
+    <link href="__PUBLIC__/Admin/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="__PUBLIC__/Admin/css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="__PUBLIC__/Admin/css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+
+    <!-- libraries -->
+    <link href="__PUBLIC__/Admin/css/lib/bootstrap-wysihtml5.css" type="text/css" rel="stylesheet" />
+    <link href="__PUBLIC__/Admin/css/lib/uniform.default.css" type="text/css" rel="stylesheet" />
+    <link href="__PUBLIC__/Admin/css/lib/select2.css" type="text/css" rel="stylesheet" />
+    <link href="__PUBLIC__/Admin/css/lib/bootstrap.datepicker.css" type="text/css" rel="stylesheet" />
+    <link href="__PUBLIC__/Admin/css/lib/font-awesome.css" type="text/css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/elements.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/icons.css" />
+    
+    <!-- this page specific styles -->
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/compiled/form-showcase.css" type="text/css" media="screen" />
+
+    <!-- open sans font -->
+    <!-- <link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' /> -->
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+
+    <!-- navbar -->
+<include file="Admin@Common:header" />
+    <!-- end navbar -->
+
+    <!-- sidebar -->
+<include file="Admin@Common:left" />
+    <!-- end sidebar -->
+
+
+	<!-- main container -->
+    <div class="content">
+        
+        <div class="container-fluid">
+            <div id="pad-wrapper" class="form-page">
+                <div class="row-fluid form-wrapper">
+    
+                            <div class="row-fluid header">
+                    <h3>栏目新增</h3>
+                    <div class="span10 pull-right">
+                        <!-- <input type="text" class="span5 search" placeholder="Type a user's name..." /> -->
+                        
+                        <a href="{:U('lst')}" class="btn-flat success pull-right">
+                            <span>&#43;</span>
+                           返回栏目列表
+                        </a>
+                    </div>
+                </div>
+
+                    <!-- left column -->
+                    <div class="span8 column">
+                        <form action="" method="post" class="new_user_form inline-input" enctype="multipart/form-data" />
+                            <div class="field-box">
+                                <label>栏目名称:</label>
+                                <input class="span8 inline-input" name="catename" type="text" />
+                            </div> 
+                            <div class="field-box">
+                                <label>上级栏目:</label>
+                                <div class="ui-select">
+                                    <select name="parentid">
+                                        <option selected="" value="0" />顶级栏目
+                           <foreach name="cates" item="v">
+                                        <option value="{$v['id']}" /> <?php  echo str_repeat('-',$v['lev']*8); ?>{$v['catename']}
+                            </foreach>
+                                    </select>
+                                </div>
+                            </div>                           
+                            <div class="field-box">
+                                <label>栏目关键词:</label>
+                                <input class="span8 inline-input" name="keywords" type="text" value="" />
+                            </div> 
+             
+                            
+                            <div class="field-box">
+                                <label>一级导航显示:</label>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="nav_show" value="1" />显示
+                                </label>
+                            </div>
+                        <div class="field-box">
+                                <label>栏目类型:</label>
+                                <div class="span8">
+                                    <label class="radio">
+                                        <input type="radio" name="type" id="optionsRadios1" value="1" checked="" />
+                                       新闻栏目
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="type" id="optionsRadios2" value="2" />
+                                        视觉栏目
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="type" id="optionsRadios3" value="3" />
+                                        娱乐栏目
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="type" id="optionsRadios4" value="4" />
+                                        新闻子栏目
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="type" id="optionsRadios5" value="5" />
+                                        视觉子栏目
+                                    </label>
+                                </div>                                
+                            </div>
+<!-- 
+                            <div class="field-box">
+                                <label>栏目推荐:</label>
+                                <div class="span8">
+                                    <label class="radio">
+                                        <input type="radio" name="rem" id="optionsRadios1" value="option1" checked="" />
+                                       一级推荐
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="rem" id="optionsRadios2" value="option2" />
+                                        二级推荐
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="rem" id="optionsRadios1" value="option1" checked="" />
+                                       三级推荐
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="rem" id="optionsRadios2" value="option2" />
+                                        四级推荐
+                                    </label>
+                                </div>                                
+                            </div> -->
+                            <div class="field-box">
+                                <label>描述:</label>
+                                <textarea name="des" class="span8" rows="4"></textarea>
+                            </div>
+                            <div class="field-box">
+                                <label>缩略图:</label>
+                                <input type="file" name="cate_pic" value="" placeholder="">
+                            </div>
+
+                                <div class="span11 field-box actions" style="margin-left: 700px;">
+                                    <input type="submit" class="btn-glow primary" value="新增栏目" />
+                                </div>
+                        </form>
+                    </div>
+
+                    <!-- right column -->
+
+                     <!--
+                    <div class="span4 column pull-right">
+                        <form />
+                            <div class="field-box">
+                                <label>Select:</label>
+                                <div class="ui-select">
+                                    <select>
+                                        <option selected="" />Dropdown
+                                        <option />Custom selects
+                                        <option />Pure css styles
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="field-box">
+                                <label>Select2 plugin styled:</label>
+                                <select style="width:250px" class="select2">
+                                    <option />
+                                    <option value="AK" />Alaska
+                                    <option value="HI" />Hawaii
+                                    <option value="CA" />California
+                                    <option value="NV" />Nevada
+                                    <option value="OR" />Oregon
+                                    <option value="WA" />Washington
+                                    <option value="AZ" />Arizona
+                                    <option value="CO" />Colorado
+                                    <option value="ID" />Idaho
+                                    <option value="MT" />Montana
+                                    <option value="NE" />Nebraska
+                                    <option value="NM" />New Mexico
+                                    <option value="ND" />North Dakota
+                                    <option value="UT" />Utah
+                                    <option value="WY" />Wyoming
+                                    <option value="AL" />Alabama
+                                    <option value="AR" />Arkansas
+                                    <option value="IL" />Illinois
+                                    <option value="IA" />Iowa
+                                    <option value="KS" />Kansas
+                                    <option value="KY" />Kentucky
+                                    <option value="LA" />Louisiana
+                                    <option value="MN" />Minnesota
+                                    <option value="MS" />Mississippi
+                                    <option value="MO" />Missouri
+                                    <option value="OK" />Oklahoma
+                                    <option value="SD" />South Dakota
+                                    <option value="TX" />Texas
+                                    <option value="TN" />Tennessee
+                                    <option value="WI" />Wisconsin
+                                    <option value="CT" />Connecticut
+                                    <option value="DE" />Delaware
+                                    <option value="FL" />Florida
+                                    <option value="GA" />Georgia
+                                    <option value="IN" />Indiana
+                                    <option value="ME" />Maine
+                                    <option value="MD" />Maryland
+                                    <option value="MA" />Massachusetts
+                                    <option value="MI" />Michigan
+                                    <option value="NH" />New Hampshire
+                                    <option value="NJ" />New Jersey
+                                    <option value="NY" />New York
+                                    <option value="NC" />North Carolina
+                                    <option value="OH" />Ohio
+                                    <option value="PA" />Pennsylvania
+                                    <option value="RI" />Rhode Island
+                                    <option value="SC" />South Carolina
+                                    <option value="VT" />Vermont
+                                    <option value="VA" />Virginia
+                                    <option value="WV" />West Virginia
+                                </select>
+                            </div>
+                            <div class="field-box">
+                                <label>Select2 multiselect:</label>
+                                <select style="width:250px" multiple="" class="select2">
+                                    <option />
+                                    <option value="AK" />Alaska
+                                    <option value="HI" selected="" />Hawaii
+                                    <option value="CA" />California
+                                    <option value="NV" />Nevada
+                                    <option value="OR" />Oregon
+                                    <option value="WA" />Washington
+                                    <option value="AZ" />Arizona
+                                    <option value="CO" />Colorado
+                                    <option value="ID" />Idaho
+                                    <option value="MT" />Montana
+                                    <option value="NE" />Nebraska
+                                    <option value="NM" />New Mexico
+                                    <option value="ND" />North Dakota
+                                    <option value="UT" />Utah
+                                    <option value="WY" />Wyoming
+                                    <option value="AL" />Alabama
+                                    <option value="AR" />Arkansas
+                                    <option value="IL" />Illinois
+                                    <option value="IA" />Iowa
+                                    <option value="KS" />Kansas
+                                    <option value="KY" />Kentucky
+                                    <option value="LA" />Louisiana
+                                    <option value="MN" />Minnesota
+                                    <option value="MS" />Mississippi
+                                    <option value="MO" />Missouri
+                                    <option value="OK" />Oklahoma
+                                    <option value="SD" />South Dakota
+                                    <option value="TX" />Texas
+                                    <option value="TN" />Tennessee
+                                    <option value="WI" />Wisconsin
+                                    <option value="CT" />Connecticut
+                                    <option value="DE" />Delaware
+                                    <option value="FL" />Florida
+                                    <option value="GA" />Georgia
+                                    <option value="IN" />Indiana
+                                    <option value="ME" />Maine
+                                    <option value="MD" />Maryland
+                                    <option value="MA" />Massachusetts
+                                    <option value="MI" />Michigan
+                                    <option value="NH" />New Hampshire
+                                    <option value="NJ" />New Jersey
+                                    <option value="NY" />New York
+                                    <option value="NC" />North Carolina
+                                    <option value="OH" />Ohio
+                                    <option value="PA" />Pennsylvania
+                                    <option value="RI" />Rhode Island
+                                    <option value="SC" />South Carolina
+                                    <option value="VT" />Vermont
+                                    <option value="VA" />Virginia
+                                    <option value="WV" />West Virginia
+                                </select>
+                            </div>
+                            <div class="field-box">
+                                <label>Input prepend & append:</label>
+                                <div class="input-prepend">
+                                    <span class="add-on">@</span>
+                                    <input class="input-large" type="text" />
+                                </div>
+                                <div class="input-append">
+                                    <input class="input-large" type="text" />
+                                    <span class="add-on">.00</span>
+                                </div>
+                            </div>
+                            <div class="field-box">
+                                <label>Datepicker:</label>
+                                <input type="text" value="03/29/2014" class="input-large datepicker" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    -->
+    <!-- end main container -->
+
+	<!-- scripts for this page -->
+    <script src="__PUBLIC__/Admin/js/wysihtml5-0.3.0.js"></script>
+    <script src="__PUBLIC__/Admin/js/jquery-latest.js"></script>
+    <script src="__PUBLIC__/Admin/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/Admin/js/bootstrap-wysihtml5-0.0.2.js"></script>
+    <script src="__PUBLIC__/Admin/js/bootstrap.datepicker.js"></script>
+    <script src="__PUBLIC__/Admin/js/jquery.uniform.min.js"></script>
+    <script src="__PUBLIC__/Admin/js/select2.min.js"></script>
+    <script src="__PUBLIC__/Admin/js/theme.js"></script>
+
+    <!-- call this page plugins -->
+    <script type="text/javascript">
+        $(function () {
+
+            // add uniform plugin styles to html elements
+            $("input:checkbox, input:radio").uniform();
+
+            // select2 plugin for select elements
+            $(".select2").select2({
+                placeholder: "Select a State"
+            });
+
+            // datepicker plugin
+            $('.datepicker').datepicker().on('changeDate', function (ev) {
+                $(this).datepicker('hide');
+            });
+
+            // wysihtml5 plugin on textarea
+            $(".wysihtml5").wysihtml5({
+                "font-styles": false
+            });
+        });
+    </script>
+
+</body>
+</html>
